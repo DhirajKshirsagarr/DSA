@@ -9,7 +9,10 @@ public class SimplyLL {
             this.data = data;
         }
     }
-
+    public static void insertInBetween(LL privous,LL node) {
+        node.nextNode=privous.nextNode;
+        privous.nextNode=node;
+    }
     public static LL insert(LL start, LL node) {
         if (start == null) {
             return node;
